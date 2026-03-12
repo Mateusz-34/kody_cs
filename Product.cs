@@ -19,7 +19,7 @@ public class Produkt
         Console.WriteLine(nazwa);
         Console.WriteLine(producent);
         Console.WriteLine(cena);
-        Console.WriteLine(" ");
+        Console.WriteLine();
     }
 }
 
@@ -28,7 +28,8 @@ public class Telewizor : Produkt
     public int przekatnaEkranu;
     public bool smartTV;
 
-    public Telewizor(string nazwa, double cena, string producent, int przekatnaEkranu, bool smartTV) : base(nazwa, cena, producent)
+    public Telewizor(string nazwa, double cena, string producent, int przekatnaEkranu, bool smartTV) 
+        : base(nazwa, cena, producent)
     {
         this.przekatnaEkranu = przekatnaEkranu;
         this.smartTV = smartTV;
@@ -40,9 +41,9 @@ public class Telewizor : Produkt
         Console.WriteLine(nazwa);
         Console.WriteLine(producent);
         Console.WriteLine(cena);
-        Console.WriteLine(przekatnaEkranu);
-        Console.WriteLine(smartTV);
-        Console.WriteLine(" ");
+        Console.WriteLine("Przekątna ekranu: " + przekatnaEkranu);
+        Console.WriteLine("Smart TV: " + smartTV);
+        Console.WriteLine();
     }
 }
 
@@ -51,7 +52,8 @@ public class Laptop : Produkt
     public int RAM;
     public string Procesor;
 
-    public Laptop(string nazwa, double cena, string producent, int RAM, string Procesor) : base(nazwa, cena, producent)
+    public Laptop(string nazwa, double cena, string producent, int RAM, string Procesor) 
+        : base(nazwa, cena, producent)
     {
         this.RAM = RAM;
         this.Procesor = Procesor;
@@ -63,9 +65,9 @@ public class Laptop : Produkt
         Console.WriteLine(nazwa);
         Console.WriteLine(producent);
         Console.WriteLine(cena);
-        Console.WriteLine(RAM);
-        Console.WriteLine(Procesor);
-        Console.WriteLine(" ");
+        Console.WriteLine("RAM: " + RAM + " GB");
+        Console.WriteLine("Procesor: " + Procesor);
+        Console.WriteLine();
     }
 }
 
@@ -82,5 +84,7 @@ class Program
         Tv2.WyswietlInformacje();
         Laptop1.WyswietlInformacje();
         Laptop2.WyswietlInformacje();
+
+        Console.ReadLine();
     }
 }
