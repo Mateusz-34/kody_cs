@@ -14,7 +14,7 @@ class Kalkulator{
                 double a = double.Parse(input1);
 
                 Console.Write("Podaj operator (+, -, *, /): ");
-                string op = Console.ReadLine()
+                string op = Console.ReadLine();
 
                 Console.Write("Podaj drugą liczbę (lub q aby zakończyć): ");
                 string input2 = Console.ReadLine();
